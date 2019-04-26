@@ -5,17 +5,14 @@
       e.preventDefault();
       let email= document.getElementById("email").value;
       let password = document.getElementById("password").value;
-    //   console.log(email);
-    //   console.log(password);
+      // console.log(email);
+      // console.log(password);
       firebase.auth().createUserWithEmailAndPassword(email, password)
-      .catch(function(error) {
-    // Handle Errors here.
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        // console.log(errorCode);
-        // console.log(errorMessage);
-        window.location.href="#errorModal";
-    // ...
-  });
+      .then(function(result){
+        alert("registro correcto");
+      })
+      .catch(function(error){
+       alert("no se realizado la autenticacion");
+      });
 
-  })
+  });

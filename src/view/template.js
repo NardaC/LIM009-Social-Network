@@ -1,5 +1,6 @@
-import {facebookLogin,googleLogin,createUser,userSesionActive,loginUser,exit} from '../view-controller/index.js'
+import {facebookLogin,googleLogin,createUser,userSesionActive,signInUser,exit} from '../controller/index.js'
 '../view/index.js'
+
 
 export const activeUserPage = (user) => {
   const content = document.getElementById('content');
@@ -49,11 +50,16 @@ export const page1 = () => {
         <input type="email" id="email-signup" placeholder="Email">
         <input type="password" id="password-signup" placeholder="Password">
         <button id="register-btn">Registrarse</button>
-        <button id="regresarHome"><img src="">Regresar</button>
+        <button id="regresarHome">Regresar</button>
       </form> `;
     const div = document.createElement('div')
     div.innerHTML = register;
     login.appendChild(div);
+    document.getElementById('regresarHome').addEventListener('click',(e)=>{
+      e.preventDefault();
+      console.log("ok");
+      exit();
+    })
   };
 
   const registerUserOk = () => {
@@ -61,14 +67,14 @@ export const page1 = () => {
     const emailSignIn = document.getElementById('email-signup');
     const passwordSignIn = document.getElementById('password-signup');
 
-    btnRegisterEmail.addEventListener('click', (event) => {
-      event.preventDefault();
+    btnRegisterEmail.addEventListener('click', (e) => {
+      e.preventDefault();
       createUser(emailSignIn.value, passwordSignIn.value);
     });
   }
-
+ 
   const btnRegister = document.getElementById('myBtn');
-  btnRegister.addEventListener('click', e => {
+  btnRegister.addEventListener('click', (e) => {
     e.preventDefault();
     registerPage();
     registerUserOk();
@@ -77,22 +83,22 @@ export const page1 = () => {
   const btnLogInEmail = document.getElementById('login-btn');
   const emailLogInEmail = document.getElementById('email-login');
   const passwordLogInEmail = document.getElementById('password-login');
-  btnLogInEmail.addEventListener('click', (event) => {
-    event.preventDefault();
-    loginUser(emailLogInEmail.value, passwordLogInEmail.value);
+  btnLogInEmail.addEventListener('click', (e) => {
+    e.preventDefault();
+    signInUser(emailLogInEmail.value, passwordLogInEmail.value);
   });
   userSesionActive();
 
   const loginFacebook = document.getElementById('fbBtn');
-  loginFacebook.addEventListener('click', e => {
+  loginFacebook.addEventListener('click', (e) => {
     e.preventDefault();
     facebookLogin();
   })
 
   const loginGoogle = document.getElementById('googleBtn');
-  loginGoogle.addEventListener('click', e => {
+  loginGoogle.addEventListener('click', (e) => {
     e.preventDefault();
     googleLogin();
   });
+  
 };
-//no se por que no se suben mis cambios a la rama de la dueña de repositorio

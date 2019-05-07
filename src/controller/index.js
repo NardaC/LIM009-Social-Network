@@ -1,6 +1,3 @@
-// aqui exportaras las funciones que necesites
-import {activeUserPage, page1} from '../view/template.js';
-
 //salir
 export const exit = () => firebase.auth().signOut()
 .then(()=> {
@@ -37,6 +34,7 @@ export const userSesionActive = () => {
     }
   });
 };
+
 //iniciar con google
 export const googleLogin = () => {
   const provider = new firebase.auth.GoogleAuthProvider();

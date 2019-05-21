@@ -1,5 +1,7 @@
 // Este es el punto de entrada de tu aplicacion
+import { initRouter } from './router.js';
 
+<<<<<<< HEAD
 import {config} from './lib/index.js';
 
   firebase.initializeApp(config);
@@ -73,3 +75,19 @@ const authGmail = ()=>{
 gmailBtn.addEventListener('click', () =>{
 	authGmail(); 	
 })
+=======
+window.addEventListener('load', () => {  
+  var config ={
+    apiKey: "AIzaSyDhPzlMom9mAEcuyk_Dw05NY2awAH_zYAU",
+    authDomain: "red-social-58567.firebaseapp.com",
+    databaseURL: "https://red-social-58567.firebaseio.com",
+    projectId: "red-social-58567",
+    storageBucket: "red-social-58567.appspot.com",
+    messagingSenderId: "305974368757",
+    appId: "1:305974368757:web:1024756010c9ad41"
+  };
+
+  firebase.initializeApp(config);
+  initRouter();
+});
+>>>>>>> 9e00af2e25eca62b8bb51c9c0e3b63df6f21e215

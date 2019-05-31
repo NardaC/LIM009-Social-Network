@@ -49,13 +49,14 @@ export const facebookLogin = () => {
 export const saveFeed = (uid, text, visuality, userName) => {
   let db = firebase.firestore();
   return db.collection("feeds").add({
-      userId: uid,
-      user: userName,
-      description: text,
-      state: visuality,
-      likes: 0,
-      date: new Date(),
+    userId: uid,
+    user: userName,
+    description: text,
+    state: visuality,
+    likes: 0,
+    date: new Date(),
   })
+  
 };
 
 //LEER DOCUMENTOS
@@ -118,3 +119,5 @@ export const updatePost = (id, text, visuality) => {
 //     likes:like
 //   })
 // }
+
+

@@ -20,13 +20,13 @@ export const viewLogin = () => {
           <div class="column-login">
             <div class="column-login-image">
                 <figure>
-                    <img class="s-size b-size" src="assets/undraw_street_food_hm5i.svg" alt="">
+                    <img class="s-size b-size" src="assets/undraw_street_food_hm5i.svg" alt="Foodtruck">
                 </figure>
             </div>
         </div>
         <div class="column-login">
             <div id='login' class="column-login-login">
-                <img class="center" src= "assets/logo-new.png">
+                <img class="logo-img" src= "assets/logo-new.png">
                 <h1 class="center">¡Bienvenidx, comensal!</h1>
             <form id="login-user">
                 <input class="d-block input-w" type="email" id="email-login" placeholder="Email">
@@ -93,5 +93,7 @@ export const viewLogin = () => {
     });
     return root;
 }
+
+
 
 

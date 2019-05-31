@@ -1,7 +1,3 @@
-html {
-  height: 100%;
-}
-
 body {
   margin: 0;
   height: 100%;
@@ -78,7 +74,7 @@ body {
   .feed-container {
     display: flex;
     flex-flow: row nowrap;
-    width: 90%;
+    width: 80%;
     margin: 0 
   }
 
@@ -131,17 +127,12 @@ body {
   }
 
   .logo-img {
-    width: 100%;
-    width: 200px;
-    height:50px;
+    width: 40%;
+ 
   }
 
   .logo-container {
     margin-bottom: 20px;
-  }
-
-  .register-container {
-    margin-top: 15px;
   }
 
   .error-alert {
@@ -185,7 +176,7 @@ body {
     background: white;
     border:solid #FF2F22;
     border-radius: 7px;
-    width: 100%;
+    width: 80%;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -373,6 +364,9 @@ body {
       display: flex;
       flex-direction: row;
       padding-right: 2%;
+  }
+  .post-user-text{
+    width: 100%
   }
 
   .comment-icon, .like-icon, .upload-icon, .edit-icon {

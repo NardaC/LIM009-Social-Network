@@ -14,7 +14,7 @@ export const viewRegister = () => {
         <a href="http://localhost:5501/src/index.html#/login"><img src='assets/fob-white.png' class="logo-img"> </a>      
         </header>
       </div>
-      <form>
+      <form class= "form-mobile">
         <input class="d-block input-w" type="text" id="name-signup" placeholder="Usuario">
         <input class="d-block input-w" type="email" id="email-signup" placeholder="Email">
         <input class="d-block input-w" type="password" id="password-signup" placeholder="Password">

@@ -4,7 +4,6 @@ import { userSesionActive } from './lib/controller-firebase/index.js';
 import {viewFeed} from './view/feed.js'
 
 const getUser = (user) =>{
-  
   viewFeed(user);
 }
 

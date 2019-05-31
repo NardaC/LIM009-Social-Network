@@ -1,4 +1,4 @@
-import { exit, saveFeed, viewFeedDb, deleteFeeds, updatePost, likePost, userSesionActive} from "../lib/controller-firebase/index.js";
+import { exit, saveFeed, viewFeedDb, deleteFeeds, updatePost, userSesionActive} from "../lib/controller-firebase/index.js";
 
 export const viewFeed = (user) => {
     const root = document.getElementById('content');
@@ -20,7 +20,7 @@ export const viewFeed = (user) => {
                         </figure>
                         <div>
                             <p class="font-weight-bold">${user.displayName || user.name}</p>
-                            <p class="font-weight-bold">Email: ${user.email}<p>
+                            <p class="font-weight-bold" >Email: ${user.email} <p>
                         </div>
                     </div>
                 </div>
@@ -34,7 +34,8 @@ export const viewFeed = (user) => {
                         <div class="btn-comment-right">
                             <img src="assets/picture.png" class="upload-icon">
                             <select id="privacy-${user.uid}" class="privacy">
-                                <option selected disabled value="">Privacidad</option>   
+                                <option selected disabled
+                                 value="">Privacidad</option>   
                                 <option value="Privado" class="font-weight-privacy">Privado</option>
                                 <option value="Público" class="font-weight-privacy">Público</option>
                             </select>
@@ -76,7 +77,7 @@ export const viewFeed = (user) => {
                         </div>
                     </div>
                     <div class="post-user-message">
-                        <textarea id="text-${objInfoPost.id}" class="post-user-text" disabled=true rows="5" cols="75">${objInfoPost.data.description}</textarea>
+                        <textarea id="text-${objInfoPost.id}" class="post-user-text" disabled rows="5" cols="75">${objInfoPost.data.description}</textarea>
                         <img src="" alt="" class="post-user-img">
                     </div>
                     <div class="post-icons">

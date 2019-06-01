@@ -4,7 +4,7 @@ export const viewFeed = (user) => {
     const root = document.getElementById('content');
     const feedPage =
     `<header>
-        <p class="text-header">¡Bienvenidx, ${user.displayName || user.name}!</p>
+        <p class="text-header">¡Bienvenidx,<br> ${user.displayName || user.name}!</p>
         <img src= 'assets/logonew-white.png' class="logo-img-feed">
         <a id="exit" class="text-header btn-signout" href="#/login">Cerrar sesión</a>     
     </header>

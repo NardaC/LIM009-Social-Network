@@ -75,7 +75,6 @@ body {
 
     width: 50%;
     height: 50%;
-    margin-left: -18%;;
   }
 
   .feed-container {
@@ -167,17 +166,17 @@ body {
 
   .text-header {
     color: white;
-    font-weight: bold;
-    font-size: 90%;
+    /* font-weight: bold; */
+    font-size: 40%;
   }
 
   .btn-signout {
-    margin-top: 1%;
-    margin-left: 3%;
+    margin-right: 10%;
+    margin-top: 4%;
     text-decoration: none;
     background-color: transparent;
     cursor: pointer;
-    font-size: 80%;
+    font-size: 40%;
   }
 
   .user-container {
@@ -222,6 +221,7 @@ body {
 
   .font-weight-bold {
     font-weight: bold;
+    font-size: 10px;
   }
 
   .wall-feed {
@@ -314,9 +314,9 @@ body {
       /* padding: 2%; */
   }
 
-  .margin-left {
+  /* .margin-left {
     margin-left: 1.5%;
-  }
+  } */
 
   select {
     width: fit-content
@@ -573,6 +573,7 @@ body {
   }
 
   .text-header {
+    margin-right: 4%;
     color: white;
     font-weight: bold;
     font-size: 100%;
@@ -595,7 +596,7 @@ body {
 
   .user-container {
     display: flex;
-    /* flex-direction: column; */
+    flex-direction: column;
     justify-content: flex-start;
     width: 90%;
     height: 50%;
